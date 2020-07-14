@@ -1,8 +1,10 @@
 package com.project.ikeademo;
 
+
 public class Changes {
 	String newStatus;
-	String localTimeStamp;
+	
+	String localTimestamp;
 	
 	public Changes() {}
 	
@@ -15,18 +17,18 @@ public class Changes {
 	}
 	
 	public String getLocalTimeStamp() {
-		return localTimeStamp;
+		return localTimestamp;
 	}
 	
 	
-	public void setLocalTimeStamp(String localTimeStamp) {
-		this.localTimeStamp = localTimeStamp;
+	public void setlocalTimestamp(String localTimestamp) {
+		this.localTimestamp = localTimestamp;
 	}
 	
 	
 	@Override
 	public String toString() {
-		return "Changes [newStatus=" + newStatus + ", localTimeStamp=" + localTimeStamp + "]";
+		return "Changes [newStatus=" + newStatus + ", localTimeStamp=" + localTimestamp + "]";
 	}
 	
 

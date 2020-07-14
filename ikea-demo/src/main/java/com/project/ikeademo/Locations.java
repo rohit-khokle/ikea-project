@@ -1,18 +1,17 @@
 package com.project.ikeademo;
 
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+
 import java.util.Arrays;
 import java.util.Date;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class Locations {
 	String iso3166;
 	String countryCode;
-	@JsonFormat(pattern="yyyy-MM-dd")
-	Date  updateAt;
+
+	//	@JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ssz")
+ // 	@JsonDeserialize(using = DateHandler.class)
+	Date  updatedAt;
 	String locationName;
 	String status;
 	String timezone;
@@ -31,12 +30,11 @@ public class Locations {
 		this.countryCode = countryCode;
 	}
 	
-	@JsonFormat(pattern="yyyy-MM-dd")
-	public Date getUpdateAt() {
-		return updateAt;
+	public Date getUpdatedAt() {
+		return updatedAt;
 	}
-	public void setUpdateAt(Date updateAt) {
-		this.updateAt = updateAt;
+	public void setupdatedAt(Date updateAt) {
+		this.updatedAt = updateAt;
 	}
 	public String getLocationName() {
 		return locationName;
@@ -70,7 +68,7 @@ public class Locations {
 	}
 	@Override
 	public String toString() {
-		return "Locations [iso3166=" + iso3166 + ", countryCode=" + countryCode + ", updateAt=" + updateAt
+		return "Locations [iso3166=" + iso3166 + ", countryCode=" + countryCode + ", updateAt=" + updatedAt
 				+ ", locationName=" + locationName + ", status=" + status + ", timezone=" + timezone
 				+ ", subdivisionCode=" + subdivisionCode + ", changes=" + Arrays.toString(changes) + "]";
 	}
